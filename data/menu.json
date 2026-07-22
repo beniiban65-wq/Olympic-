@@ -1,0 +1,1034 @@
+{
+  "title": "Olympic Hotel",
+  "subtitle": "Fine dining menu",
+  "categories": [
+    {
+      "id": "58d29a29-1629-4e3a-a2d7-98e244a69844",
+      "name": "Hot Starters",
+      "items": [
+        {
+          "id": "ff92bf04-2c7e-4649-a0dc-2bd9ea40ea5b",
+          "name": "Fish soup",
+          "price": "10000",
+          "description": "Fish sauce, carrots, baby marron, celery, maggi, pepper"
+        },
+        {
+          "id": "fd0c19c6-1cc4-4f91-916f-d951772a427d",
+          "name": "Chicken soup",
+          "price": "10000",
+          "description": "Small pieces of chicken, baby marron, maggi, celery"
+        },
+        {
+          "id": "10c52d4b-8633-4eb9-91a1-15078ca8bd2a",
+          "name": "Chicken cream",
+          "price": "10000",
+          "description": "Small pieces of chicken, cream, baby marron, maggi, celery"
+        },
+        {
+          "id": "d332fbf4-7d9d-4e0f-b0cc-35edd564b350",
+          "name": "Vegetable soup",
+          "price": "9000",
+          "description": "Vegetable soup, spinach, carrots, potatoes, salt, pepper"
+        },
+        {
+          "id": "df760989-1455-4ddf-b77a-a24b2527aa71",
+          "name": "Mushroom soup",
+          "price": "9000",
+          "description": "Fresh mushroom, milk, butter, cream, persary, salt, pepper"
+        },
+        {
+          "id": "3c18d19b-cc77-4eb3-a68f-39c20b172361",
+          "name": "Pumpkin soup",
+          "price": "9000",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "f0e4da33-75cd-4320-a8c1-8588b81aa212",
+      "name": "Salads",
+      "items": [
+        {
+          "id": "ca634a8f-bad6-47e1-a6bf-eba3d27f6565",
+          "name": "Chef salad",
+          "price": "10000",
+          "description": "Cheese, ham, egg, tomatoes, lettuce, onions, cucumber, bread"
+        },
+        {
+          "id": "7a868e06-0a7a-490c-861d-6d7f50a13a48",
+          "name": "Chicken salad",
+          "price": "10000",
+          "description": "Chicken, lettuce, onions, tomatoes, avocado, mayonnaise carrot, Boiled eggs, cheese"
+        },
+        {
+          "id": "d2844c29-0b8a-4720-86b0-7534bbb46050",
+          "name": "Olympic salad",
+          "price": "11000",
+          "description": "Tuna fish, boiled eggs, Green peas, lettuce, tomatoes, avocado and dressing"
+        },
+        {
+          "id": "1648b921-66d1-471c-8605-f4edc1afa6f8",
+          "name": "Salad Mixte",
+          "price": "8000",
+          "description": "Onions, tomatoes, lettuce, carrots, cucumber, avocado, egg, bread, dressing"
+        },
+        {
+          "id": "351d5712-406e-4f31-82df-f559d13f984c",
+          "name": "Avocado vinaigrette",
+          "price": "7000",
+          "description": "Vinaigrette sauce feel in avocado, lettuce, tomatoes"
+        }
+      ]
+    },
+      {
+        "id": "breakfast",
+        "name": "Breakfast / Petit Dejeuner",
+        "items": [
+          {
+            "id": "complete-breakfast",
+            "name": "Complete breakfast / Petit dejeuner complet",
+            "price": "15000",
+            "description": "Self service complete breakfast"
+          }
+        ]
+      },
+    {
+      "id": "b-main-courses",
+      "name": "B. Main courses / Menus principaux",
+      "items": []
+    },
+    {
+      "id": "b1-beef-without-cream",
+      "name": "B1. Beef Without Cream / Boeuf Sans Craime",
+      "items": [
+        {
+          "id": "provincial-steak",
+          "name": "Provincial steak / Steak Provincial",
+          "price": "14000",
+          "description": "Pan-fried beef with provincial sauce + accompaniment"
+        },
+        {
+          "id": "beef-stew",
+          "name": "Beef Stew",
+          "price": "14000",
+          "description": "Pan-fried beef tubes in provincial sauce + accompaniment"
+        },
+        {
+          "id": "steak-onions",
+          "name": "Steak Onions",
+          "price": "14000",
+          "description": "Pan-fried beef steak with onions, garlic, dark sauce, salt, persary + accompaniment"
+        },
+        {
+          "id": "escalope-cordon-bleu",
+          "name": "Escalope cardon bleu / Escalope de filet de boeuf cordon bleu",
+          "price": "15000",
+          "description": "Pan fried beef steak marinate stuffed with cheese and ham, bed on provincial sauce + accompaniment"
+        },
+        {
+          "id": "beef-fajita",
+          "name": "Beef Fajita / Boeuf fajita (Sizzling plates)",
+          "price": "15000",
+          "description": "Pan-fried beef steak, garlic, celery, black pepper, baby marron, carrots, onions, green pepper, tomato cut in cube style served with rice, chapati, mushed beans & guacamole"
+        },
+        {
+          "id": "big-platter",
+          "name": "Big platter",
+          "price": "12000",
+          "description": "Nyamachoma (leg), 8 meat balls, Beef Brouchette, fried chicken wings, BBQ pork ribs, fish finger, samossa beef, with either pilaw or Italian cheese potatoes, spring rolls, goat brouchette, vegetable samossa, chicken brouchette per used 8 or 10 pax"
+        }
+      ]
+    },
+    {
+      "id": "b2-beef-with-cream",
+      "name": "B2. Beef With Cream / Boeuf avec La Craime",
+      "items": [
+        {
+          "id": "green-pepper-steak",
+          "name": "Green pepper steak / Steak au poivres vert",
+          "price": "14000",
+          "description": "Pan-fried beef steak with poivre sauce and tomato, green pepper cut in julienne style + accompaniment"
+        },
+        {
+          "id": "steak-with-mushroom",
+          "name": "Steak with mushroom / Filet de boeuf au champignon",
+          "price": "14000",
+          "description": "Pan-fried beef steak with mushroom sauce + accompaniment"
+        },
+        {
+          "id": "t-bone-steak",
+          "name": "T-bone steak",
+          "price": "15000",
+          "description": "T-bone steak"
+        }
+      ]
+    },
+    {
+      "id": "b3-chicken-no-cream",
+      "name": "B3. Chicken No Cream / Chicken Sans Craime",
+      "items": [
+        {
+          "id": "quarter-lemon-chicken",
+          "name": "1/4 Lemon Chicken / 1/4 Poulet au citron",
+          "price": "14000",
+          "description": "1/4 Pan-fried chicken, garlic, celery, green pepper, light sauce, flour, onions, lemon juice, caps,zesta, salt + accompaniment"
+        },
+        {
+          "id": "quarter-provincial-chicken",
+          "name": "1/4 Provincial chicken / 1/4 Poulet Provincial",
+          "price": "14000",
+          "description": "Pan-fried 1/4 chicken, tomato fresh, tomato paste, onions, garlic, green pepper, salt + accompaniment"
+        },
+        {
+          "id": "quarter-chicken-onions",
+          "name": "1/4 Chicken onions",
+          "price": "14000",
+          "description": "Pan-fried 1/4 chicken, onions, garlic, dark sauce, salt + accompaniment"
+        },
+        {
+          "id": "chicken-fajita",
+          "name": "Chicken Fajita (Sizzling plates)",
+          "price": "15000",
+          "description": "Pan-fried chicken breast, garlic, celery, black pepper, baby marron, carrots, onions, green pepper, tomato cut in cube style. Served with rice, chapati, mushed beans and guacamole (avocado)"
+        }
+      ]
+    },
+    {
+      "id": "b4-chicken-no-cream-continued",
+      "name": "",
+      "items": [
+        {
+          "id": "vegetable-chicken",
+          "name": "Vegetable chicken / Eminc de poulet au Petit legumes",
+          "price": "14000",
+          "description": "Pan-fried chicken breast, garlic, salt, baby marron, carrots, onions, green pepper, cut in julienne style + accompaniment"
+        },
+        {
+          "id": "chicken-milanese",
+          "name": "Chicken Milanese",
+          "price": "14000",
+          "description": "Deep fried coated breast chicken topped with cheese, salt, papper + accompaniment"
+        },
+        {
+          "id": "chilli-chicken",
+          "name": "Chilli chicken",
+          "price": "14000",
+          "description": "Deep fried boneless chicken, green pepper, onion in cube style, dark sauce, chilli salt, salt to taste, chilli sauce + chips"
+        }
+      ]
+    },
+    {
+      "id": "b5-chicken-cream",
+      "name": "Chicken Cream / Poulet à la Crème",
+      "items": [
+        {
+          "id": "quarter-chicken-curry",
+          "name": "1/4 Chicken Curry / 1/4 Poulet au CURRY",
+          "price": "14000",
+          "description": "1/4 Pan-fried chicken, cubes, curry powder, fresh garlic and tomatoes, green pepper, carrots cut in small cubes, milk, butter, maggi + accompaniment"
+        },
+        {
+          "id": "escalope-chicken",
+          "name": "Escalope chicken / Escalope de bras de volaille",
+          "price": "15000",
+          "description": "Pan-fried chicken, breast marinated/stuffed with ham and cheese bed on white sauce + accompaniment"
+        },
+        {
+          "id": "strognoff-chicken",
+          "name": "Strognof Chicken / Poulet strognoff",
+          "price": "15000",
+          "description": "Pan-fried chicken, breast, mushroom, garlic, celery, salt, butter, fresh milk and green pepper, tomato, onion cut in julienne + accompaniment"
+        },
+        {
+          "id": "chicken-yassa",
+          "name": "Chicken Yassa",
+          "price": "15000",
+          "description": "Chicken Yassa"
+        },
+        {
+          "id": "grilled-chicken-forest-sauce",
+          "name": "Grilled chicken with forest sauce",
+          "price": "14000",
+          "description": "Grilled chicken served with forest sauce + accompaniment"
+        }
+      ]
+    },
+    {
+      "id": "b6-fish-no-cream",
+      "name": "Fish No Cream / Poissons Sans Crème",
+      "items": [
+        {
+          "id": "fish-provincial",
+          "name": "Fish Provincial / Filet de Capitaine sauce Provincial",
+          "price": "14000",
+          "description": "Deep-fried marinated fish with Provincial sauce, salt, pepper + accompaniment"
+        },
+        {
+          "id": "fish-meuniere",
+          "name": "Fish Meuniere / Filet de Capitaine Meunieresauce",
+          "price": "14000",
+          "description": "Deep-fried marinated fish dressing, onions, garlic, green pepper, salt and pepper + accompaniment"
+        },
+        {
+          "id": "fish-papillote",
+          "name": "Fish papillote",
+          "price": "15000",
+          "description": "Steamed fish, green pepper, tomato, baby marron, carrots cut in julienne style, white wine, salt and pepper + accompaniment"
+        },
+        {
+          "id": "garlic-lemon-butter-fish",
+          "name": "Garlic lemon butter Fish",
+          "price": "14000",
+          "description": "Seasoned fish accompanied with a rich nutty butter lemon and garlic sauce"
+        },
+        {
+          "id": "fish-stew",
+          "name": "Fish Stew",
+          "price": "14000",
+          "description": "Pan-fried fish cubes in red sauce"
+        },
+        {
+          "id": "fish-curry",
+          "name": "Fish curry",
+          "price": "14000",
+          "description": "Pan-fried fish cubes in curry sauce"
+        },
+        {
+          "id": "fish-filon",
+          "name": "Fish filolentine",
+          "price": "14000",
+          "description": "Fried fish fillet and wilted spinach in a sauce with sauteed onion and mushroom"
+        },
+        {
+          "id": "fish-gratin",
+          "name": "Fish Gratin",
+          "price": "14000",
+          "description": "Fish fillet baked in a spinach and cream sauce, wrapped with mashed potatoes, cheese and parsley"
+        }
+      ]
+    },
+    {
+      "id": "b7-fish-with-cream",
+      "name": "Fish With Cream / Poisson à la Crème",
+      "items": [
+        {
+          "id": "tilapia-mushroom-sauce",
+          "name": "Tilapia with mushroom sauce / Filet de tilapia",
+          "price": "16000",
+          "description": "Deep fried marinated fish with mushroom sauce + accompaniment"
+        },
+        {
+          "id": "fish-fillet-capitaine-mushroom",
+          "name": "Fish Fillet Capitaine with mushroom sauce",
+          "price": "14000",
+          "description": "Filet de capitaine with mushroom sauce (Rice, Chips, Veggies)"
+        }
+      ]
+    },
+    {
+      "id": "b8-pork",
+      "name": "Pork / Porc",
+      "items": [
+        {
+          "id": "pork-chop",
+          "name": "Pork chop / Côtes de Porc",
+          "price": "15000",
+          "description": "Deep-fried pork chop, garlic, onions, carrots, baby marron, lemon juice, salt and pepper + accompaniment"
+        },
+        {
+          "id": "olympic-boneless-porc",
+          "name": "Olympic boneless porc",
+          "price": "14000",
+          "description": "Fried porc, onions, green pepper, carrots cut in cube style, celery, garlic, lemon juice, Maggi + accompaniment and salad"
+        },
+        {
+          "id": "special-boneless-pork",
+          "name": "Special boneless pork (Sizzling plates)",
+          "price": "15000",
+          "description": "Fried porc, onions, green pepper, garlic and veggies"
+        }
+      ]
+    },
+    {
+      "id": "b9-pasta-no-meat",
+      "name": "Pasta No Meat / Pâtes Sans Viande",
+      "items": [
+        {
+          "id": "vegetarian-spaghetti",
+          "name": "Vegetarian spaghetti / Spaghetti vegetarian",
+          "price": "10000",
+          "description": "Spaghetti, dark sauce, garlic, carrots, celery, salt, baby marron, onion, green pepper cut in julienne style"
+        },
+        {
+          "id": "macaroni-napolitaine",
+          "name": "Macaroni napolitaine / Macaroni Pomodolo",
+          "price": "10000",
+          "description": "Macaroni, fresh tomatoes, tomato paste, green pepper, onion, celery, garlic, salt and pepper"
+        },
+        {
+          "id": "spaghetti-affredo",
+          "name": "Spaghetti affredo",
+          "price": "10000",
+          "description": "Fried onions, peas, spaghetti, green pepper, cream"
+        }
+      ]
+    },
+    {
+      "id": "b10-pasta-with-meats",
+      "name": "Pasta With Meats / Pâtes à Viande",
+      "items": [
+        {
+          "id": "spaghetti-bolognaise",
+          "name": "Spaghetti bolognaise",
+          "price": "12000",
+          "description": "Boiled spaghetti, minced meat, celery, green pepper, garlic, salt, cheese, pepper"
+        },
+        {
+          "id": "spaghetti-carbonara",
+          "name": "Spaghetti Carbonara",
+          "price": "12000",
+          "description": "Boiled spaghetti, bacon, butter, fresh milk, celery, pepper"
+        },
+        {
+          "id": "lasagne-chicken-or-beef",
+          "name": "Lasagne (Chicken or Beef)",
+          "price": "13000",
+          "description": "Lasagne with chicken or beef"
+        },
+        {
+          "id": "chicken-noodles",
+          "name": "Chicken noodles",
+          "price": "12000",
+          "description": "Boiled noodles, chicken breast in minced style, tomato paste, celery, onions, green pepper, garlic, dark sauce, salt"
+        },
+        {
+          "id": "macaroni-pesto",
+          "name": "Macaroni Pesto",
+          "price": "12000",
+          "description": "Macaroni with pesto sauce"
+        }
+      ]
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs / Les Oeufs",
+      "items": [
+        {
+          "id": "boiled-eggs-3",
+          "name": "Boiled eggs (3pcs)",
+          "price": "4000",
+          "description": ""
+        },
+        {
+          "id": "nature-omelette-3",
+          "name": "Nature omelette (3pcs)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "mushroom-omelette-3",
+          "name": "Mushroom omelette (3pcs)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "spanish-omelette-3",
+          "name": "Spanish omelet (3pcs)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "special-omelette-5",
+          "name": "Special omelet (5pcs)",
+          "price": "10000",
+          "description": ""
+        },
+        {
+          "id": "jambo-omelette-3",
+          "name": "Omelette au jambo et fromage (3pcs)",
+          "price": "5500",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "name": "Snacks",
+      "items": [
+        {
+          "id": "sambusa-1",
+          "name": "Sambusa / Samosa (1pcs)",
+          "price": "1500",
+          "description": ""
+        },
+        {
+          "id": "plate-sambusa-4",
+          "name": "Plate of Sambusa (4pcs)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "arachide-bowl",
+          "name": "Arachide / Peanuts (1 boll)",
+          "price": "4000",
+          "description": ""
+        },
+        {
+          "id": "plate-meatball-4",
+          "name": "Plate of meatball (4pcs)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "boulette-meatball-1",
+          "name": "Boulette / meatball (1pcs)",
+          "price": "1500",
+          "description": ""
+        },
+        {
+          "id": "cheese-plate",
+          "name": "Cheese plates",
+          "price": "5500",
+          "description": ""
+        },
+        {
+          "id": "sausage-plate",
+          "name": "Sausage plate",
+          "price": "6000",
+          "description": ""
+        },
+        {
+          "id": "chapati-3",
+          "name": "Chapati (3pcs)",
+          "price": "6000",
+          "description": ""
+        },
+        {
+          "id": "fish-fingers-plain-5",
+          "name": "Fish Fingers plain (5pcs)",
+          "price": "6000",
+          "description": ""
+        },
+        {
+          "id": "fish-fingers-chips-5",
+          "name": "Fish Fingers with chips (5pcs)",
+          "price": "8000",
+          "description": ""
+        },
+        {
+          "id": "chicken-wings-chips",
+          "name": "Chicken Wings (Fried) + Chips",
+          "price": "8000",
+          "description": ""
+        },
+        {
+          "id": "chicken-roll-pot-chips",
+          "name": "Chicken Roll/pot + chips (5pcs)",
+          "price": "8000",
+          "description": ""
+        },
+        {
+          "id": "snacks-olympic",
+          "name": "Snacks olympic (mixed)",
+          "price": "12000",
+          "description": "Samosa, Chicken Wings, Fish fingers, salad + chips, meat, boll"
+        },
+        {
+          "id": "big-cookies",
+          "name": "Big Cookies Biscuits",
+          "price": "1500",
+          "description": ""
+        },
+        {
+          "id": "cups-cake-3",
+          "name": "Cups cake (3pcs)",
+          "price": "4000",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "accompaniment",
+      "name": "Accompaniment / A Side",
+      "items": [
+        {
+          "id": "chips-plantain",
+          "name": "Chips (Plantain) umuzuzu",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "chips-irish",
+          "name": "Chips (Irish potatoes)",
+          "price": "4000",
+          "description": ""
+        },
+        {
+          "id": "basmati-rice",
+          "name": "Basmati rice",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "boiled-potatoes",
+          "name": "Pomme nature / Boilled potatoes",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "garden-vegetables",
+          "name": "Garden vegetables",
+          "price": "6000",
+          "description": ""
+        },
+        {
+          "id": "roasted-banana",
+          "name": "Roasted banana / Banane grille",
+          "price": "1500",
+          "description": ""
+        },
+        {
+          "id": "fried-banana",
+          "name": "Fried banana / Banane saute",
+          "price": "1500",
+          "description": ""
+        },
+        {
+          "id": "grilled-yams",
+          "name": "Grille yams",
+          "price": "2000",
+          "description": ""
+        },
+        {
+          "id": "roasted-irish-potato",
+          "name": "Roasted Irish potato",
+          "price": "1500",
+          "description": ""
+        },
+        {
+          "id": "vegetarian-food-plate",
+          "name": "Vegetarian Food Plate",
+          "price": "12000",
+          "description": "Customer choice - ask for available ingredients"
+        },
+        {
+          "id": "banana-pizze-2",
+          "name": "Banane Pizze (2pcs)",
+          "price": "5000",
+          "description": "Marinated and fried banana green"
+        },
+        {
+          "id": "mushed-potato",
+          "name": "Mushed Potato",
+          "price": "6000",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "items": [
+        {
+          "id": "cocktail-fruits",
+          "name": "Cocktail fruits / Macedoine (Salad Fruits)",
+          "price": "10000",
+          "description": ""
+        },
+        {
+          "id": "plates-of-fruits",
+          "name": "Plates of fruits / Cutting fruits",
+          "price": "10000",
+          "description": ""
+        },
+        {
+          "id": "pan-cake-3",
+          "name": "Pan cake - Crepe nature (3pcs)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "jam-filled-crepes-3",
+          "name": "Jam filled/crepes (strawberry) (3pcs)",
+          "price": "5000",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "rwandan-special",
+      "name": "Rwandan Special Food",
+      "items": [
+        {
+          "id": "suggestion-du-chef",
+          "name": "Suggestion du Chef (choice one meat)",
+          "price": "35000",
+          "description": "Beef, Chicken, Goat, Mixed Banana, Potatoes and Herb"
+        },
+        {
+          "id": "half-suggestion-chef",
+          "name": "1/2 Suggestion du Chef (choice one meat)",
+          "price": "17500",
+          "description": "Beef, Chicken, Goat, Mixed Banana, Potatoes and Herb"
+        },
+        {
+          "id": "bouillon-viande-legume",
+          "name": "Bouillon de viande au legume (choice one meat)",
+          "price": "15000",
+          "description": "Vegetables, bananas or irish potatoes and meat"
+        },
+        {
+          "id": "agatogo",
+          "name": "Agatogo de (beef, chicken, Goats)",
+          "price": "15000",
+          "description": "Boiled meat, potatoes or banana, tomato, onions, peanut"
+        },
+        {
+          "id": "whole-chicken-spice-rice",
+          "name": "Whole chicken spiece rice",
+          "price": "31000",
+          "description": "Whole chicken with spiced rice"
+        }
+      ]
+    },
+    {
+      "id": "hot-buffet",
+      "name": "Hot Buffet (Lunch or dinner)",
+      "items": [
+        {
+          "id": "complete-buffet-2",
+          "name": "Complete Buffet (2 meats)",
+          "price": "18000",
+          "description": "Accompaniment + Beef and Chicken, salad and Fruits"
+        },
+        {
+          "id": "complete-buffet-3",
+          "name": "Complete Buffet (3 meats)",
+          "price": "25000",
+          "description": "Accompaniment + fish, Beef and Chicken, salad and Fruits"
+        }
+      ]
+    },
+    {
+      "id": "baked-foods-pizza",
+      "name": "Baked Foods / Pizza",
+      "items": [
+        {
+          "id": "marquerite-pizza",
+          "name": "Marquerite Pizza / Pizza Marguerite",
+          "price": "9000",
+          "description": "Tomato sauce, tomato fresh, cheese, oregano"
+        },
+        {
+          "id": "italian-pizza",
+          "name": "Italian Pizza",
+          "price": "12000",
+          "description": "Minced meat, Tomato sauce, tomato fresh, onions, cheese, oregano"
+        },
+        {
+          "id": "hawaiin-pizza",
+          "name": "Hawaiin pizza",
+          "price": "10000",
+          "description": "Ham, Tomato sauce, pineapple, cheese, oregano"
+        },
+        {
+          "id": "pizza-4-seasons",
+          "name": "Pizza for four seasons",
+          "price": "13000",
+          "description": "Mushroom, green pepper, onion, tomato, sausages, cheese, chicken and ham"
+        },
+        {
+          "id": "chicken-pizza",
+          "name": "Chicken Pizza",
+          "price": "12000",
+          "description": "Chicken, mushroom, green pepper, onion, tomato, oregano, cheese"
+        },
+        {
+          "id": "sausage-pizza",
+          "name": "Sausage pizza",
+          "price": "11000",
+          "description": "Sausage, mushroom, onion, tomato, green pepper"
+        }
+      ]
+    },
+    {
+      "id": "sandwiches-wraps",
+      "name": "Sandwich & Wraps",
+      "items": [
+        {
+          "id": "sandwich-au-jambo",
+          "name": "Sandwich au jambo",
+          "price": "8000",
+          "description": "Bread stuffed with ham slice, tomato, lettuce, cucumber + chips"
+        },
+        {
+          "id": "sandwich-jambo-fromage",
+          "name": "Sandwich au jambo fromage",
+          "price": "9000",
+          "description": "Bread stuffed with ham fromage, slice of tomato, cucumber, lettuce + chips"
+        },
+        {
+          "id": "beef-mayo-wraps",
+          "name": "Beef mayo wraps + ACC",
+          "price": "15000",
+          "description": ""
+        },
+        {
+          "id": "chicken-wraps-acc",
+          "name": "Chicken wraps + ACC",
+          "price": "15000",
+          "description": ""
+        },
+        {
+          "id": "hot-dog",
+          "name": "Hot dog",
+          "price": "9000",
+          "description": "Sandwich, fresh Sausage and Chips"
+        },
+        {
+          "id": "chicken-sandwich",
+          "name": "Chicken sandwich",
+          "price": "12000",
+          "description": "Bread stuffed with chicken breast, slice of tomato, cucumber, lettuce + chips"
+        },
+        {
+          "id": "club-sandwich",
+          "name": "Club sandwich",
+          "price": "10000",
+          "description": "Toast bread stuffed with jambo, cheese, omelette + chips"
+        },
+        {
+          "id": "cheese-sandwich",
+          "name": "Cheese sandwich",
+          "price": "9000",
+          "description": "Bread stuffed with cheese slices, tomatoes, lettuce + chips"
+        }
+      ]
+    },
+    {
+      "id": "croques",
+      "name": "Croques",
+      "items": [
+        {
+          "id": "croque-monsieur",
+          "name": "Croque monsieur",
+          "price": "9000",
+          "description": "Toast bread stuffed with ham, cheese + Chips"
+        },
+        {
+          "id": "croque-madame",
+          "name": "Croque madam",
+          "price": "9000",
+          "description": "Toast bread stuffed with cheese + Chips"
+        }
+      ]
+    },
+    {
+      "id": "hamburgers",
+      "name": "Hamburger",
+      "items": [
+        {
+          "id": "beef-burger",
+          "name": "Beef burger",
+          "price": "9000",
+          "description": "Burger of beef, slice tomato, cucumber, lettuce + Chips"
+        },
+        {
+          "id": "cheese-burger",
+          "name": "Cheese burger",
+          "price": "10000",
+          "description": "Burger of beef, cheese, slice tomato, onion, cucumber, lettuce + Chips"
+        },
+        {
+          "id": "cheese-burger-bacon",
+          "name": "Cheese burger bacon",
+          "price": "12000",
+          "description": "Beef, bacon, fried egg, cheese, slice tomato, onion, cucumber + Chips"
+        },
+        {
+          "id": "vegetable-burger",
+          "name": "Vegetable burger",
+          "price": "8000",
+          "description": ""
+        },
+        {
+          "id": "chicken-burger",
+          "name": "Chicken burger",
+          "price": "9000",
+          "description": "Burger of chicken, slice tomato, onion, cucumber, lettuce + Chips"
+        },
+        {
+          "id": "double-burger",
+          "name": "Double burger",
+          "price": "14000",
+          "description": "2 burger of beef, slice tomato, onion, cucumber, lettuce + Chips"
+        }
+      ]
+    },
+    {
+      "id": "barbeque-bbq",
+      "name": "Barbeque (BBQ)",
+      "items": [
+        {
+          "id": "goat-brochette-nature",
+          "name": "Goat brochette nature (1pc)",
+          "price": "4000",
+          "description": ""
+        },
+        {
+          "id": "goat-brochette-zingalo",
+          "name": "Goat brochette zingalo (1pc)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "whole-goat",
+          "name": "Whole goat",
+          "price": "200000",
+          "description": ""
+        },
+        {
+          "id": "goat-leg-nyamachoma",
+          "name": "Goat leg nyamachoma",
+          "price": "30000",
+          "description": "with katchumbali"
+        },
+        {
+          "id": "fish-brochette",
+          "name": "Fish brochette / Brochette de poisson nature (1pc)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "beef-brochette",
+          "name": "Beef brochette / Brochette de boeuf (1pc)",
+          "price": "5000",
+          "description": ""
+        },
+        {
+          "id": "whole-local-chicken",
+          "name": "Whole local chicken",
+          "price": "25000",
+          "description": "Choice one accompaniment: potatoes or banana and yams and salad"
+        },
+        {
+          "id": "whole-modern-chicken",
+          "name": "Whole modern chicken",
+          "price": "25000",
+          "description": "Choice one accompaniment: potatoes or banana and salad"
+        },
+        {
+          "id": "special-chicken-cyimbosi",
+          "name": "Special Chicken (cyimbosi) with salad",
+          "price": "35000",
+          "description": "Barbeque chicken, fried and vegetable, roasted potatoes, banana sauteed"
+        },
+        {
+          "id": "d1a0f9bd-2b22-466a-ba25-11f1c3842df4",
+          "name": "1/2 Local chicken with chips and salad",
+          "description": "",
+          "price": "15,000"
+        },
+        {
+          "id": "99d35fa7-1e9a-4c10-bbd0-e36d86b3a066",
+          "name": "1/2 Modern chicken with chips and salad",
+          "description": "",
+          "price": "15,000"
+        },
+        {
+          "id": "c50df3c0-b537-43d8-83cd-17b15b8e72e6",
+          "name": "Sausage brochette(1pc)",
+          "description": "",
+          "price": "5,000"
+        },
+        {
+          "id": "55b09dd6-f1dc-4432-93a1-ea508e68446c",
+          "name": "Whole fish/poison entier",
+          "description": "",
+          "price": "25,000"
+        }
+      ]
+    }
+    ,
+    {
+      "id": "drinks",
+      "name": "Drinks / Boissons",
+      "items": [
+        { "id": "soft-sodas-30cl", "name": "Sodas 30cl", "price": "1500", "description": "" },
+        { "id": "mineral-water", "name": "Mineral Water", "price": "1500", "description": "" },
+        { "id": "big-water", "name": "Big Water", "price": "2000", "description": "" },
+        { "id": "heineken-0-percent", "name": "Heineken 0% Alcohol", "price": "3000", "description": "" },
+        { "id": "red-bull", "name": "Red Bull", "price": "4000", "description": "" },
+        { "id": "bavaria-no-alcohol", "name": "Bavaria No-alcool", "price": "4000", "description": "" },
+        { "id": "panache", "name": "Panache", "price": "1500", "description": "" },
+        { "id": "inyange-juice", "name": "Inyange Juice", "price": "2000", "description": "" },
+        { "id": "fanta-plastic", "name": "Fanta (plastic)", "price": "2000", "description": "" },
+        { "id": "skol-maltona", "name": "Skol Maltona", "price": "2000", "description": "" },
+
+        { "id": "mutzig-33cl", "name": "Mutzig 33cl", "price": "2000", "description": "Beer" },
+        { "id": "mutzig-big", "name": "Mutzig Big", "price": "4000", "description": "Beer" },
+        { "id": "mutzig-pression", "name": "Mutzig pression", "price": "4000", "description": "Beer" },
+        { "id": "primus-big", "name": "Primus Big", "price": "2500", "description": "Beer" },
+        { "id": "heineken", "name": "Heineken", "price": "2500", "description": "Beer" },
+        { "id": "amstel", "name": "Amstel", "price": "2500", "description": "Beer" },
+        { "id": "guiness", "name": "Guiness", "price": "2500", "description": "Beer" },
+        { "id": "tusker-lager", "name": "Tusker lager", "price": "2500", "description": "Beer" },
+
+        { "id": "red-wine-altaris", "name": "Altaris Red (bottle)", "price": "40000", "description": "Red wine" },
+        { "id": "red-wine-long-champs", "name": "Long Champs Cabernet Sauv.", "price": "30000", "description": "Red wine" },
+        { "id": "red-wine-robertson", "name": "Robertson Red Sweet", "price": "30000", "description": "Red wine" },
+        { "id": "red-wine-chateau-au", "name": "Chateau Au Vinoble Red", "price": "55000", "description": "Red wine" },
+
+        { "id": "white-wine-domaine-bergon", "name": "Domaine Bergon White", "price": "35000", "description": "White wine" },
+        { "id": "white-wine-pintanegro", "name": "Pintanegro White Btl", "price": "30000", "description": "White wine" },
+
+        { "id": "liqueur-amrula", "name": "Amarula", "price": "15000", "description": "Liqueur" },
+        { "id": "liqueur-scherdan", "name": "Scherdan's", "price": "15000", "description": "Liqueur" },
+        { "id": "liqueur-kahlua", "name": "Kahlua", "price": "15000", "description": "Liqueur" },
+        { "id": "liqueur-baileys", "name": "Baileys", "price": "15000", "description": "Liqueur" },
+        { "id": "v-and-a-sherry-200ml", "name": "V&A Sherry 200ml", "price": "8000", "description": "" },
+
+        { "id": "cognac-martel-vsop", "name": "Martel Vsop", "price": "15000", "description": "Cognac / Brandy" },
+        { "id": "cognac-hennessy-vsop", "name": "Hennessy Vsop", "price": "15000", "description": "Cognac / Brandy" },
+
+        { "id": "whisky-jack-daniels", "name": "Jack Daniels", "price": "7000", "description": "Whisky glass price (see full menu)" },
+        { "id": "whisky-chivas-12", "name": "Chivas whisky 12 years", "price": "5000", "description": "" },
+
+        { "id": "smoothie-mango-breeze", "name": "Mango breeze (smoothie)", "price": "8000", "description": "Smoothie" },
+        { "id": "smoothie-mango-banana", "name": "Mango banana smoothies", "price": "8000", "description": "Smoothie" },
+        { "id": "smoothie-avocado-banana", "name": "Avocado banana smoothies", "price": "8000", "description": "Smoothie" },
+        { "id": "smoothie-strawberry", "name": "Strawberry smoothie", "price": "7000", "description": "Smoothie" },
+
+        { "id": "milkshake-oreo", "name": "Oreo milk shake", "price": "9000", "description": "Milkshake" },
+        { "id": "milkshake-strawberry", "name": "Strawberry milk shake", "price": "7500", "description": "Milkshake" },
+
+        { "id": "mojito-alcoholic", "name": "Mojito (alcoholic)", "price": "8500", "description": "" },
+        { "id": "mojito-virgin", "name": "Virgin Mojito", "price": "10000", "description": "" },
+
+        { "id": "detox-hot", "name": "Hot detox", "price": "8000", "description": "" },
+        { "id": "detox-cold", "name": "Cold detox", "price": "8000", "description": "" },
+
+        { "id": "flavored-caramel-latte", "name": "Caramel latte / cappuccino", "price": "6000", "description": "Flavored coffee" },
+        { "id": "flavored-coconut-latte", "name": "Coconut latte / cappuccino", "price": "6000", "description": "Flavored coffee" },
+
+        { "id": "iced-americano", "name": "Iced Americano", "price": "4000", "description": "Iced coffee" },
+
+        { "id": "tea-african", "name": "African tea", "price": "4000", "description": "Tea" },
+        { "id": "iced-african-tea", "name": "Iced African tea", "price": "4500", "description": "Iced tea" },
+
+        { "id": "ice-cream-vanilla", "name": "Vanilla icecream", "price": "5000", "description": "Ice cream" },
+
+        { "id": "cocktail-margarita", "name": "Margarita", "price": "15000", "description": "Cocktail" },
+        { "id": "cocktail-cosmopolitan", "name": "Cosmopolitan", "price": "15000", "description": "Cocktail" },
+        { "id": "cocktail-screwdriver", "name": "Screw Driver", "price": "10000", "description": "Cocktail" },
+
+        { "id": "gin-beefeater", "name": "Beefeater Gin", "price": "5000", "description": "" },
+        { "id": "tequila-olmecca", "name": "Taquilla Olmeca blanco", "price": "5000", "description": "" },
+        { "id": "rum-bacardi-white", "name": "Bacardi White", "price": "5000", "description": "" },
+        { "id": "vodka-absolut", "name": "Absolut Vodka", "price": "4000", "description": "" },
+
+        { "id": "vermouth-martini", "name": "Martini Rosso / bianco", "price": "15000", "description": "Vermouth" }
+      ]
+    }
+  ]
+}
