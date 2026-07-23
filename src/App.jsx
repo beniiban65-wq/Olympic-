@@ -143,13 +143,22 @@ const createDefaultMenu = () => ({
 const API_BASE_URL = import.meta.env.VITE_API_URL || '';
 const DEFAULT_ROUTE = import.meta.env.VITE_DEFAULT_ROUTE || '/menu';
 const INCLUDE_EDITOR = (import.meta.env.VITE_INCLUDE_EDITOR || 'false') === 'true';
+const PUBLIC_HOST = import.meta.env.VITE_PUBLIC_URL || '';
+const PUBLIC_DEFAULT_ROUTE = import.meta.env.VITE_PUBLIC_DEFAULT_ROUTE || '/menu';
 const buildApiUrl = (path) => {
   if (!API_BASE_URL) return path;
   return `${API_BASE_URL.replace(/\/$/, '')}${path.startsWith('/') ? path : `/${path}`}`;
 };
 
 const getPublicMenuUrl = () => {
-  if (typeof window === 'undefined') return DEFAULT_ROUTE;
+  const route = PUBLIC_HOST ? PUBLIC_DEFAULT_ROUTE : DEFAULT_ROUTE;
+  if (typeof window === 'undefined') return route;
+
+  if (PUBLIC_HOST) {
+    const host = PUBLIC_HOST.replace(/\/$/, '');
+    return `${host}${route.startsWith('/') ? route : `/${route}`}`;
+  }
+
   const base = import.meta.env.BASE_URL || '/';
   const normalizedBase = base.endsWith('/') ? base : `${base}/`;
   return new URL(DEFAULT_ROUTE.replace(/^[\/]+/, ''), `${window.location.origin}${normalizedBase}`).toString();
