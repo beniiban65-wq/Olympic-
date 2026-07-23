@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { Link, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import QRCode from 'qrcode';
 
 const AUTH_KEY  = 'olympic-hotel-editor-auth';
@@ -140,17 +140,25 @@ const createDefaultMenu = () => ({
   ],
 });
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+const DEFAULT_ROUTE = import.meta.env.VITE_DEFAULT_ROUTE || '/menu';
+const INCLUDE_EDITOR = (import.meta.env.VITE_INCLUDE_EDITOR || 'false') === 'true';
+const buildApiUrl = (path) => {
+  if (!API_BASE_URL) return path;
+  return `${API_BASE_URL.replace(/\/$/, '')}${path.startsWith('/') ? path : `/${path}`}`;
+};
+
 const getPublicMenuUrl = () => {
-  if (typeof window === 'undefined') return '/menu';
+  if (typeof window === 'undefined') return DEFAULT_ROUTE;
   const base = import.meta.env.BASE_URL || '/';
   const normalizedBase = base.endsWith('/') ? base : `${base}/`;
-  return new URL('menu', `${window.location.origin}${normalizedBase}`).toString();
+  return new URL(DEFAULT_ROUTE.replace(/^[\/]+/, ''), `${window.location.origin}${normalizedBase}`).toString();
 };
 
 const loadMenu = async () => {
   if (typeof window === 'undefined') return createDefaultMenu();
   try {
-    const response = await fetch('/api/menu');
+    const response = await fetch(buildApiUrl('/api/menu'));
     if (!response.ok) {
       console.error('Failed to load menu:', response.statusText);
       return createDefaultMenu();
@@ -167,7 +175,7 @@ const loadMenu = async () => {
 
 const saveMenu = async (menu) => {
   if (typeof window === 'undefined') return menu;
-  const response = await fetch('/api/menu', {
+  const response = await fetch(buildApiUrl('/api/menu'), {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(menu),
@@ -818,25 +826,25 @@ function App() {
     initialize();
   }, []);
 
-  useEffect(() => {
-    if (window.location.pathname === '/') {
-      navigate('/editor', { replace: true });
-    }
-  }, [navigate]);
-
   return (
     <Routes>
       <Route
-        path="/editor"
-        element={
-          <EditorPage
-            menuData={menuData}
-            setMenuData={setMenuData}
-            theme={theme}
-            onToggleTheme={toggleTheme}
-          />
-        }
+        path="/"
+        element={<Navigate to={DEFAULT_ROUTE} replace />}
       />
+      {INCLUDE_EDITOR && (
+        <Route
+          path="/editor"
+          element={
+            <EditorPage
+              menuData={menuData}
+              setMenuData={setMenuData}
+              theme={theme}
+              onToggleTheme={toggleTheme}
+            />
+          }
+        />
+      )}
       <Route
         path="/menu"
         element={
@@ -849,14 +857,7 @@ function App() {
       />
       <Route
         path="*"
-        element={
-          <EditorPage
-            menuData={menuData}
-            setMenuData={setMenuData}
-            theme={theme}
-            onToggleTheme={toggleTheme}
-          />
-        }
+        element={<Navigate to={DEFAULT_ROUTE} replace />}
       />
     </Routes>
   );
