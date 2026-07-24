@@ -60,6 +60,53 @@ const getCategoryIcon = (name = '') => {
   return '✦';
 };
 
+/* Group drinks into logical sub-categories for the public menu */
+const groupDrinks = (items = []) => {
+  const groups = {
+    Wine: [],
+    Beer: [],
+    Cocktail: [],
+    Smoothie: [],
+    Milkshake: [],
+    Coffee: [],
+    Tea: [],
+    Juice: [],
+    Liqueur: [],
+    Spirits: [],
+    Others: [],
+  };
+
+  const kw = (s = '') => (s || '').toLowerCase();
+
+  for (const it of items) {
+    const name = kw(it.name);
+    const desc = kw(it.description);
+
+    if (name.includes('wine') || name.includes('red') || name.includes('white') || desc.includes('wine')) {
+      groups.Wine.push(it); continue;
+    }
+    if (name.includes('mutzig') || name.includes('heineken') || name.includes('beer') || desc.includes('beer')) {
+      groups.Beer.push(it); continue;
+    }
+    if (name.includes('mojito') || name.includes('margarita') || name.includes('cocktail') || desc.includes('cocktail')) {
+      groups.Cocktail.push(it); continue;
+    }
+    if (name.includes('smoothie')) { groups.Smoothie.push(it); continue; }
+    if (name.includes('milkshake') || name.includes('milk shake')) { groups.Milkshake.push(it); continue; }
+    if (name.includes('latte') || name.includes('coffee') || name.includes('americano')) { groups.Coffee.push(it); continue; }
+    if (name.includes('tea')) { groups.Tea.push(it); continue; }
+    if (name.includes('juice') || name.includes('inyange')) { groups.Juice.push(it); continue; }
+    if (name.includes('amarula') || name.includes('baileys') || name.includes('liqueur') || desc.includes('liqueur')) { groups.Liqueur.push(it); continue; }
+    if (name.includes('vodka') || name.includes('rum') || name.includes('tequila') || name.includes('gin') || name.includes('whisky') || name.includes('whiskey') || name.includes('cognac') || name.includes('brandy')) { groups.Spirits.push(it); continue; }
+
+    groups.Others.push(it);
+  }
+
+  // Only return groups that have items, in a sensible order
+  const order = ['Cocktail', 'Wine', 'Beer', 'Spirits', 'Liqueur', 'Smoothie', 'Milkshake', 'Coffee', 'Tea', 'Juice', 'Others'];
+  return order.map((k) => ({ name: k, items: groups[k] })).filter((g) => g.items && g.items.length > 0);
+};
+
 /* ---- Data helpers ---- */
 const createDefaultMenu = () => ({
   title: 'Olympic Hotel',
@@ -769,24 +816,58 @@ function PublicMenuPage({ menuData: initialData, theme, onToggleTheme }) {
               <div className="category-heading-line" />
             </div>
 
-            <div className="items-grid">
-              {category.items.map((item, itemIndex) => (
-                <article
-                  key={item.id}
-                  className="public-item"
-                  style={{ '--item-delay': `${itemIndex * 0.07 + catIndex * 0.05}s` }}
-                >
-                  <div className="item-accent-line" />
-                  <div className="public-item-top">
-                    <h3>{item.name}</h3>
-                    <span className="item-price-badge">RWF {item.price}</span>
+            {(/drink|boisson|boissons|boissons/i).test(category.name) ? (
+              // Render grouped drinks
+              (() => {
+                const groups = groupDrinks(category.items);
+                return (
+                  <div className="drink-groups">
+                    {groups.map((g, gi) => (
+                      <div key={g.name} className="drink-group" style={{ marginBottom: 18 }}>
+                        <h3 className="drink-group-title">{g.name}</h3>
+                        <div className="items-grid">
+                          {g.items.map((item, itemIndex) => (
+                            <article
+                              key={item.id}
+                              className="public-item"
+                              style={{ '--item-delay': `${itemIndex * 0.07 + catIndex * 0.05 + gi * 0.02}s` }}
+                            >
+                              <div className="item-accent-line" />
+                              <div className="public-item-top">
+                                <h3>{item.name}</h3>
+                                <span className="item-price-badge">RWF {item.price}</span>
+                              </div>
+                              {item.description && (
+                                <p className="item-desc">{item.description}</p>
+                              )}
+                            </article>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  {item.description && (
-                    <p className="item-desc">{item.description}</p>
-                  )}
-                </article>
-              ))}
-            </div>
+                );
+              })()
+            ) : (
+              <div className="items-grid">
+                {category.items.map((item, itemIndex) => (
+                  <article
+                    key={item.id}
+                    className="public-item"
+                    style={{ '--item-delay': `${itemIndex * 0.07 + catIndex * 0.05}s` }}
+                  >
+                    <div className="item-accent-line" />
+                    <div className="public-item-top">
+                      <h3>{item.name}</h3>
+                      <span className="item-price-badge">RWF {item.price}</span>
+                    </div>
+                    {item.description && (
+                      <p className="item-desc">{item.description}</p>
+                    )}
+                  </article>
+                ))}
+              </div>
+            )}
           </section>
         ))}
       </main>
@@ -809,8 +890,8 @@ function App() {
 
   /* ---- Theme state ---- */
   const [theme, setTheme] = useState(() => {
-    if (typeof window === 'undefined') return 'dark';
-    return localStorage.getItem(THEME_KEY) || 'dark';
+    if (typeof window === 'undefined') return 'light';
+    return localStorage.getItem(THEME_KEY) || 'light';
   });
 
   const toggleTheme = () => {
