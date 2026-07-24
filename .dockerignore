@@ -1,0 +1,8 @@
+node_modules
+dist
+.vercel
+data/menu.json
+.env
+*.log
+node_modules
+/.git
