@@ -1144,13 +1144,15 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.2;
 }
 
 /* ========================================================
-   GLOBAL LOGO HEADER
-   ======================================================== */
+  GLOBAL LOGO HEADER
+  ======================================================== */
 .app-header {
+  /* Hide the global header on public pages to avoid duplicate
+    branding blocks (logo remains inside the hero). */
+  display: none !important;
   position: sticky;
   top: 0;
   z-index: 30;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 18px 24px;
