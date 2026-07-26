@@ -870,7 +870,8 @@ function PublicMenuPage({ menuData: initialData }) {
    ROOT APP
    ============================================================ */
 function App() {
-  const [menuData, setMenuData] = useState(createDefaultMenu());
+  const [menuData, setMenuData] = useState(null);
+  const [isLoadingMenu, setIsLoadingMenu] = useState(true);
   const navigate = useNavigate();
 
   /* ---- Theme state ---- */
@@ -883,9 +884,24 @@ function App() {
     const initialize = async () => {
       const data = await loadMenu();
       setMenuData(data);
+      setIsLoadingMenu(false);
     };
     initialize();
   }, []);
+
+  if (isLoadingMenu) {
+    return (
+      <>
+        <LogoHeader />
+        <div className="loading-screen">
+          <div className="loading-card">
+            <img src={CUSTOM_LOGO_URL} alt="Olympic Hotel logo" className="app-logo" />
+            <p className="loading-message">Loading menu…</p>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
