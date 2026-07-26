@@ -1122,25 +1122,27 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.2;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 24px;
-  background: rgba(255,255,255,0.95);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  backdrop-filter: blur(12px);
+  padding: 18px 24px;
+  background: rgba(255,255,255,0.98);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .app-logo {
-  height: 42px;
+  height: 64px;
   width: auto;
   display: block;
 }
 
 .hero-logo,
 .auth-logo {
-  width: 96px;
+  width: 152px;
+  max-width: 70%;
   height: auto;
   display: block;
-  margin: 0 auto 18px;
-  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.08));
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 14px 34px rgba(0,0,0,0.14));
 }
 
 /* ========================================================
