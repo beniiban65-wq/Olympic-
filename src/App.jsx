@@ -10,7 +10,7 @@ const CUSTOM_LOGO_URL = import.meta.env.VITE_LOGO_URL || logoUrl;
 function LogoHeader() {
   return (
     <header className="app-header">
-      <img src={CUSTOM_LOGO_URL} alt="Olympic Hotel logo" className="app-logo" />
+      <img src={CUSTOM_LOGO_URL} alt="Olympic Hotel logo" className="app-logo" decoding="async" />
     </header>
   );
 }
@@ -274,6 +274,11 @@ function EditorPage({ menuData, setMenuData }) {
     try {
       const savedMenu = await saveMenu(menuData);
       setMenuData(savedMenu);
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.setItem('olympic_menu_cache', JSON.stringify(savedMenu));
+        }
+      } catch (e) { /* ignore */ }
       setSaveMessage('✓ Menu saved and published.');
     } catch (error) {
       const message = error?.message || 'Saving failed. Please try again.';
@@ -746,7 +751,7 @@ function PublicMenuPage({ menuData: initialData }) {
             />
           ))}
         </div>
-        <img src={CUSTOM_LOGO_URL} alt="Olympic Hotel logo" className="hero-logo" />
+        <img src={CUSTOM_LOGO_URL} alt="Olympic Hotel logo" className="hero-logo" decoding="async" width="192" height="80" />
         <p className="eyebrow">Welcome to</p>
         <h1>
           {localMenuData.title.includes(' ') ? (
@@ -892,9 +897,32 @@ function App() {
   /* Load menu data */
   useEffect(() => {
     const initialize = async () => {
-      const data = await loadMenu();
-      setMenuData(data);
-      setIsLoadingMenu(false);
+      // Fast path: use cached menu if available to show content instantly on phones
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          const cached = window.localStorage.getItem('olympic_menu_cache');
+          if (cached) {
+            try {
+              const parsed = JSON.parse(cached);
+              setMenuData(parsed);
+              setIsLoadingMenu(false);
+            } catch (e) {
+              // ignore parse errors and continue to fetch
+            }
+          }
+        }
+      } catch (e) { /* ignore */ }
+
+      // Always fetch fresh data in background and update cache/state
+      try {
+        const fresh = await loadMenu();
+        setMenuData(fresh);
+        try { if (typeof window !== 'undefined' && window.localStorage) window.localStorage.setItem('olympic_menu_cache', JSON.stringify(fresh)); } catch (e) {}
+      } catch (e) {
+        // network errors are handled inside loadMenu()
+      } finally {
+        setIsLoadingMenu(false);
+      }
     };
     initialize();
   }, []);
