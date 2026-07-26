@@ -905,7 +905,6 @@ function App() {
 
   return (
     <>
-      <LogoHeader />
       <Routes>
         <Route
           path="/"
@@ -915,10 +914,13 @@ function App() {
           <Route
             path="/editor"
             element={
+              <>
+                <LogoHeader />
               <EditorPage
                 menuData={menuData}
                 setMenuData={setMenuData}
               />
+              </>
             }
           />
         )}
