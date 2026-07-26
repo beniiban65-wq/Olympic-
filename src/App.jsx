@@ -660,6 +660,16 @@ function PublicMenuPage({ menuData: initialData }) {
   const [activeCategory, setActiveCategory] = useState(null);
   const sectionRefs = useRef({});
 
+  /* Remove any leftover global header inserted elsewhere (helps mobile cache/hydration edge cases) */
+  useEffect(() => {
+    try {
+      const hdr = document.querySelector('.app-header');
+      if (hdr && window.location.pathname.startsWith('/menu')) hdr.remove();
+    } catch (e) {
+      /* ignore */
+    }
+  }, []);
+
   /* Sync from parent */
   useEffect(() => { setLocalMenuData(initialData); }, [initialData]);
 
