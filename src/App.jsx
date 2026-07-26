@@ -180,7 +180,8 @@ const createDefaultMenu = () => ({
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://olympic-production.up.railway.app' : '');
 const DEFAULT_ROUTE = import.meta.env.VITE_DEFAULT_ROUTE || '/menu';
-const INCLUDE_EDITOR = (import.meta.env.VITE_INCLUDE_EDITOR || 'false') === 'true';
+// Admin editor is always enabled so staff can access it at /editor.
+const INCLUDE_EDITOR = true;
 const PUBLIC_HOST = import.meta.env.VITE_PUBLIC_URL || '';
 const PUBLIC_DEFAULT_ROUTE = import.meta.env.VITE_PUBLIC_DEFAULT_ROUTE || '/menu';
 const buildApiUrl = (path) => {
