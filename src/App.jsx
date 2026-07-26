@@ -896,33 +896,55 @@ function App() {
 
   /* Load menu data */
   useEffect(() => {
+    const fetchWithTimeout = (resource, options = {}) => {
+      const { timeout = 3500 } = options;
+      const controller = new AbortController();
+      const id = setTimeout(() => controller.abort(), timeout);
+      return fetch(resource, { ...options, signal: controller.signal }).finally(() => clearTimeout(id));
+    };
+
     const initialize = async () => {
-      // Fast path: use cached menu if available to show content instantly on phones
+      // Attempt to load fresh menu from backend first (network-first).
+      try {
+        const url = buildApiUrl('/api/menu');
+        const res = await fetchWithTimeout(url, { cache: 'no-store', headers: { Accept: 'application/json' }, timeout: 4000 });
+        if (res && res.ok) {
+          const data = await res.json();
+          if (data && Array.isArray(data.categories) && data.categories.length > 0) {
+            setMenuData(data);
+            try { if (typeof window !== 'undefined' && window.localStorage) window.localStorage.setItem('olympic_menu_cache', JSON.stringify(data)); } catch (e) {}
+            setIsLoadingMenu(false);
+            return;
+          }
+        }
+      } catch (e) {
+        // network failed or timed out; we'll fall back to cache below
+      }
+
+      // Network-first failed or returned invalid data — fall back to cached menu if available
       try {
         if (typeof window !== 'undefined' && window.localStorage) {
           const cached = window.localStorage.getItem('olympic_menu_cache');
           if (cached) {
-            try {
-              const parsed = JSON.parse(cached);
-              setMenuData(parsed);
-              setIsLoadingMenu(false);
-            } catch (e) {
-              // ignore parse errors and continue to fetch
-            }
+            const parsed = JSON.parse(cached);
+            setMenuData(parsed);
+            setIsLoadingMenu(false);
+            // still try to refresh in background
+            loadMenu().then((fresh) => {
+              if (fresh && Array.isArray(fresh.categories) && fresh.categories.length > 0) {
+                setMenuData(fresh);
+                try { if (typeof window !== 'undefined' && window.localStorage) window.localStorage.setItem('olympic_menu_cache', JSON.stringify(fresh)); } catch (e) {}
+              }
+            }).catch(() => {});
+            return;
           }
         }
       } catch (e) { /* ignore */ }
 
-      // Always fetch fresh data in background and update cache/state
-      try {
-        const fresh = await loadMenu();
-        setMenuData(fresh);
-        try { if (typeof window !== 'undefined' && window.localStorage) window.localStorage.setItem('olympic_menu_cache', JSON.stringify(fresh)); } catch (e) {}
-      } catch (e) {
-        // network errors are handled inside loadMenu()
-      } finally {
-        setIsLoadingMenu(false);
-      }
+      // No cache — load default menu as last resort (should be rare)
+      const fallback = await loadMenu();
+      setMenuData(fallback);
+      setIsLoadingMenu(false);
     };
     initialize();
   }, []);
