@@ -889,34 +889,35 @@ function App() {
     <>
       <LogoHeader />
       <Routes>
-      <Route
-        path="/"
-        element={<Navigate to={DEFAULT_ROUTE} replace />}
-      />
-      {INCLUDE_EDITOR && (
         <Route
-          path="/editor"
+          path="/"
+          element={<Navigate to={DEFAULT_ROUTE} replace />}
+        />
+        {INCLUDE_EDITOR && (
+          <Route
+            path="/editor"
+            element={
+              <EditorPage
+                menuData={menuData}
+                setMenuData={setMenuData}
+              />
+            }
+          />
+        )}
+        <Route
+          path="/menu"
           element={
-            <EditorPage
+            <PublicMenuPage
               menuData={menuData}
-              setMenuData={setMenuData}
             />
           }
         />
-      )}
-      <Route
-        path="/menu"
-        element={
-          <PublicMenuPage
-            menuData={menuData}
-          />
-        }
-      />
-      <Route
-        path="*"
-        element={<Navigate to={DEFAULT_ROUTE} replace />}
-      />
-    </Routes>
+        <Route
+          path="*"
+          element={<Navigate to={DEFAULT_ROUTE} replace />}
+        />
+      </Routes>
+    </>
   );
 }
 
