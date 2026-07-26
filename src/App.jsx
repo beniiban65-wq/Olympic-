@@ -681,7 +681,7 @@ function PublicMenuPage({ menuData: initialData, theme, onToggleTheme }) {
     let active = true;
     const refresh = async () => {
       try {
-        const res = await fetch('/api/menu');
+        const res = await fetch(buildApiUrl('/api/menu'));
         if (!res.ok) return;
         const data = await res.json();
         if (!active) return;
