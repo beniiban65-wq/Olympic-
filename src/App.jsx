@@ -1,26 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import QRCode from 'qrcode';
+import logoUrl from './logo.svg';
 
-const AUTH_KEY  = 'olympic-hotel-editor-auth';
-const THEME_KEY = 'olympic-hotel-theme';
+const AUTH_KEY = 'olympic-hotel-editor-auth';
 const DEFAULT_PASSWORD = 'olympic2026';
 
-/* ============================================================
-   THEME TOGGLE BUTTON
-   ============================================================ */
-function ThemeToggle({ theme, onToggle }) {
+function LogoHeader() {
   return (
-    <button
-      id="theme-toggle-btn"
-      onClick={onToggle}
-      className="theme-toggle-btn"
-      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-    >
-      <span className="theme-toggle-icon">{theme === 'dark' ? '☀️' : '🌙'}</span>
-      {theme === 'dark' ? 'Light' : 'Dark'}
-    </button>
+    <header className="app-header">
+      <img src={logoUrl} alt="Olympic Hotel logo" className="app-logo" />
+    </header>
   );
 }
 
@@ -250,7 +240,7 @@ const saveMenu = async (menu) => {
 /* ============================================================
    EDITOR PAGE
    ============================================================ */
-function EditorPage({ menuData, setMenuData, theme, onToggleTheme }) {
+function EditorPage({ menuData, setMenuData }) {
   const [password, setPassword] = useState('');
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState('');
@@ -404,7 +394,7 @@ function EditorPage({ menuData, setMenuData, theme, onToggleTheme }) {
     return (
       <div className="auth-screen">
         <div className="auth-card">
-          <span className="auth-crown">♛</span>
+          <img src={logoUrl} alt="Olympic Hotel logo" className="auth-logo" />
           <p className="eyebrow">Olympic Hotel</p>
           <h1>Menu Editor</h1>
           <p className="auth-description">Enter your password to unlock the menu editor.</p>
@@ -425,10 +415,6 @@ function EditorPage({ menuData, setMenuData, theme, onToggleTheme }) {
           <p className="auth-hint">
             Password: <code>olympic2026</code>
           </p>
-          {/* Theme toggle on auth screen */}
-          <div style={{ marginTop: 20, display: 'flex', justifyContent: 'center' }}>
-            <ThemeToggle theme={theme} onToggle={onToggleTheme} />
-          </div>
         </div>
       </div>
     );
@@ -443,7 +429,6 @@ function EditorPage({ menuData, setMenuData, theme, onToggleTheme }) {
           <h1>Menu Editor</h1>
         </div>
         <div className="topbar-actions">
-          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           <Link to="/menu" className="secondary-button" target="_blank" rel="noopener noreferrer">
             ↗ View Live Menu
           </Link>
@@ -668,7 +653,7 @@ function QrPanel() {
 /* ============================================================
    PUBLIC MENU PAGE — Cinematic guest-facing menu
    ============================================================ */
-function PublicMenuPage({ menuData: initialData, theme, onToggleTheme }) {
+function PublicMenuPage({ menuData: initialData }) {
   const [localMenuData, setLocalMenuData] = useState(initialData);
   const [activeCategory, setActiveCategory] = useState(null);
   const sectionRefs = useRef({});
@@ -749,7 +734,7 @@ function PublicMenuPage({ menuData: initialData, theme, onToggleTheme }) {
             />
           ))}
         </div>
-        <span className="hero-crown">♛</span>
+        <img src={logoUrl} alt="Olympic Hotel logo" className="hero-logo" />
         <p className="eyebrow">Welcome to</p>
         <h1>
           {localMenuData.title.includes(' ') ? (
@@ -790,8 +775,6 @@ function PublicMenuPage({ menuData: initialData, theme, onToggleTheme }) {
                 </button>
               ))}
             </nav>
-            {/* Theme toggle in nav */}
-            <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           </div>
         </div>
       )}
@@ -889,23 +872,9 @@ function App() {
   const navigate = useNavigate();
 
   /* ---- Theme state ---- */
-  const [theme, setTheme] = useState(() => {
-    if (typeof window === 'undefined') return 'light';
-    return localStorage.getItem(THEME_KEY) || 'light';
-  });
-
-  const toggleTheme = () => {
-    setTheme((current) => {
-      const next = current === 'dark' ? 'light' : 'dark';
-      localStorage.setItem(THEME_KEY, next);
-      return next;
-    });
-  };
-
-  /* Apply theme to document root */
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-  }, [theme]);
+    document.documentElement.dataset.theme = 'light';
+  }, []);
 
   /* Load menu data */
   useEffect(() => {
@@ -917,7 +886,9 @@ function App() {
   }, []);
 
   return (
-    <Routes>
+    <>
+      <LogoHeader />
+      <Routes>
       <Route
         path="/"
         element={<Navigate to={DEFAULT_ROUTE} replace />}
@@ -929,8 +900,6 @@ function App() {
             <EditorPage
               menuData={menuData}
               setMenuData={setMenuData}
-              theme={theme}
-              onToggleTheme={toggleTheme}
             />
           }
         />
@@ -940,8 +909,6 @@ function App() {
         element={
           <PublicMenuPage
             menuData={menuData}
-            theme={theme}
-            onToggleTheme={toggleTheme}
           />
         }
       />
