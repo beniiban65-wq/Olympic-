@@ -5,11 +5,12 @@ import logoUrl from './logo.svg';
 
 const AUTH_KEY = 'olympic-hotel-editor-auth';
 const DEFAULT_PASSWORD = 'olympic2026';
+const CUSTOM_LOGO_URL = import.meta.env.VITE_LOGO_URL || logoUrl;
 
 function LogoHeader() {
   return (
     <header className="app-header">
-      <img src={logoUrl} alt="Olympic Hotel logo" className="app-logo" />
+      <img src={CUSTOM_LOGO_URL} alt="Olympic Hotel logo" className="app-logo" />
     </header>
   );
 }
@@ -394,7 +395,7 @@ function EditorPage({ menuData, setMenuData }) {
     return (
       <div className="auth-screen">
         <div className="auth-card">
-          <img src={logoUrl} alt="Olympic Hotel logo" className="auth-logo" />
+          <img src={CUSTOM_LOGO_URL} alt="Olympic Hotel logo" className="auth-logo" />
           <p className="eyebrow">Olympic Hotel</p>
           <h1>Menu Editor</h1>
           <p className="auth-description">Enter your password to unlock the menu editor.</p>
@@ -734,7 +735,7 @@ function PublicMenuPage({ menuData: initialData }) {
             />
           ))}
         </div>
-        <img src={logoUrl} alt="Olympic Hotel logo" className="hero-logo" />
+        <img src={CUSTOM_LOGO_URL} alt="Olympic Hotel logo" className="hero-logo" />
         <p className="eyebrow">Welcome to</p>
         <h1>
           {localMenuData.title.includes(' ') ? (
